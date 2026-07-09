@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("SHA-3 State Matrix Demonstration\n\n");
+
+    printf("Block Size : 1024 bits\n");
+    printf("Capacity   : 576 bits\n");
+    printf("Rate       : 448 bits\n\n");
+
+    printf("Ignoring permutation,\n");
+    printf("non-zero lanes gradually fill the capacity lanes.\n");
+
+    return 0;
+}
