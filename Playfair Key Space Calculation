@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double keys = 1.55e25;
+
+    printf("Approximate Playfair Key Space\n");
+    printf("Number of possible keys = %.2e\n", keys);
+    printf("Approximate power of 2 = 2^84\n");
+
+    return 0;
+}
