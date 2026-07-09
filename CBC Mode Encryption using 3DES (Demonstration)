@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+
+    printf("CBC Mode using Triple DES\n");
+    printf("-------------------------\n");
+    printf("Encryption Process:\n");
+    printf("1. XOR Plaintext Block with Previous Ciphertext (or IV).\n");
+    printf("2. Encrypt using 3DES.\n");
+    printf("3. Output Ciphertext.\n\n");
+
+    printf("For Security  : Choose CBC with 3DES.\n");
+    printf("For Performance: Choose DES (faster but less secure).\n");
+
+    return 0;
+}
