@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+void encrypt(char text[], int key) {
+    int i;
+
+    for(i = 0; text[i] != '\0'; i++)
+        text[i] = text[i] ^ key;
+}
+
+void decrypt(char text[], int key) {
+    int i;
+
+    for(i = 0; text[i] != '\0'; i++)
+        text[i] = text[i] ^ key;
+}
+
+int main() {
+
+    char text[100];
+    int key;
+
+    printf("Enter Plain Text: ");
+    scanf("%s", text);
+
+    printf("Enter Numeric Key: ");
+    scanf("%d", &key);
+
+    encrypt(text, key);
+
+    printf("\nEncrypted Text: %s", text);
+
+    decrypt(text, key);
+
+    printf("\nDecrypted Text: %s", text);
+
+    return 0;
+}
