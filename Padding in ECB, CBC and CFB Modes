@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    printf("Padding in ECB, CBC and CFB Modes\n\n");
+
+    printf("Even if the plaintext length is already a multiple of the block size,\n");
+    printf("an extra padding block is added.\n\n");
+
+    printf("Reason:\n");
+    printf("1. It allows the receiver to identify and remove padding correctly.\n");
+    printf("2. It prevents ambiguity when the last byte equals a padding value.\n");
+    printf("3. It improves security against certain padding attacks.\n");
+
+    return 0;
+}
