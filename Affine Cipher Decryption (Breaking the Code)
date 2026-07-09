@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int modInverse(int a)
+{
+    int i;
+    for(i=1;i<26;i++)
+        if((a*i)%26==1)
+            return i;
+    return -1;
+}
+
+int main()
+{
+    char cipher[100], plain[100];
+    int a,b,i,inv;
+
+    printf("Enter Cipher Text: ");
+    scanf("%s",cipher);
+
+    printf("Enter value of a: ");
+    scanf("%d",&a);
+
+    printf("Enter value of b: ");
+    scanf("%d",&b);
+
+    inv=modInverse(a);
+
+    if(inv==-1)
+    {
+        printf("Inverse does not exist.");
+        return 0;
+    }
+
+    for(i=0;cipher[i]!='\0';i++)
+    {
+        plain[i]=((inv*((cipher[i]-'A')-b+26))%26)+'A';
+    }
+
+    plain[i]='\0';
+
+    printf("Plain Text: %s",plain);
+
+    return 0;
+}
