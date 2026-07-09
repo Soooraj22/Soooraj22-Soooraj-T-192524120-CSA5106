@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char text[100];
+    int a, b, i;
+
+    printf("Enter Plain Text: ");
+    scanf("%[^\n]", text);
+
+    printf("Enter value of a: ");
+    scanf("%d", &a);
+
+    printf("Enter value of b: ");
+    scanf("%d", &b);
+
+    for(i = 0; text[i] != '\0'; i++) {
+        if(isalpha(text[i])) {
+            char base = isupper(text[i]) ? 'A' : 'a';
+            text[i] = ((a * (text[i] - base) + b) % 26) + base;
+        }
+    }
+
+    printf("Cipher Text: %s\n", text);
+
+    return 0;
+}
