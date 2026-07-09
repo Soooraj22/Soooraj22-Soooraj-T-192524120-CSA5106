@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+long long power(long long a,long long b,long long mod)
+{
+    long long ans=1;
+
+    while(b)
+    {
+        if(b%2)
+            ans=(ans*a)%mod;
+
+        a=(a*a)%mod;
+        b/=2;
+    }
+
+    return ans;
+}
+
+int main()
+{
+    int q,a,xa,xb;
+
+    printf("Enter Prime(q): ");
+    scanf("%d",&q);
+
+    printf("Enter Primitive Root(a): ");
+    scanf("%d",&a);
+
+    printf("Alice Secret: ");
+    scanf("%d",&xa);
+
+    printf("Bob Secret: ");
+    scanf("%d",&xb);
+
+    int ya=power(a,xa,q);
+    int yb=power(a,xb,q);
+
+    int ka=power(yb,xa,q);
+    int kb=power(ya,xb,q);
+
+    printf("\nAlice Public Key = %d",ya);
+    printf("\nBob Public Key = %d",yb);
+
+    printf("\nShared Secret (Alice) = %d",ka);
+    printf("\nShared Secret (Bob) = %d",kb);
+
+    return 0;
+}
