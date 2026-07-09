@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    printf("Playfair Cipher Decryption\n");
+    printf("---------------------------------\n");
+    printf("This program decrypts ciphertext using the Playfair cipher.\n");
+    printf("Steps:\n");
+    printf("1. Construct the 5x5 matrix using the keyword.\n");
+    printf("2. Split ciphertext into pairs.\n");
+    printf("3. Apply Playfair decryption rules:\n");
+    printf("   - Same Row    : Move Left\n");
+    printf("   - Same Column : Move Up\n");
+    printf("   - Rectangle   : Exchange Columns\n");
+
+    return 0;
+}
