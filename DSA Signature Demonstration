@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int k1, k2;
+
+    printf("Enter Random k for Signature 1: ");
+    scanf("%d", &k1);
+
+    printf("Enter Random k for Signature 2: ");
+    scanf("%d", &k2);
+
+    if (k1 == k2)
+        printf("\nWarning: Same k used. Security Risk!\n");
+    else
+        printf("\nDifferent k values produce different signatures.\n");
+
+    printf("Unlike RSA, DSA generates a unique signature every time.\n");
+
+    return 0;
+}
