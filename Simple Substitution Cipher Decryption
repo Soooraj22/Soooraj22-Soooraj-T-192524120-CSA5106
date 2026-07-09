@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cipher[100], plain[100];
+    char key[27];
+
+    printf("Enter Cipher Text: ");
+    scanf("%[^\n]", cipher);
+
+    printf("Enter 26-letter substitution key: ");
+    scanf("%s", key);
+
+    int i;
+
+    for(i=0; cipher[i]!='\0'; i++)
+    {
+        if(isupper(cipher[i]))
+        {
+            int j;
+            for(j=0;j<26;j++)
+            {
+                if(key[j]==cipher[i])
+                {
+                    plain[i]='A'+j;
+                    break;
+                }
+            }
+        }
+        else
+            plain[i]=cipher[i];
+    }
+
+    plain[i]='\0';
+
+    printf("Plain Text: %s", plain);
+
+    return 0;
+}
