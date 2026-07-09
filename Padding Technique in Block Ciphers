@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int blockSize, msgSize, padding;
+
+    printf("Enter Block Size (in bytes): ");
+    scanf("%d", &blockSize);
+
+    printf("Enter Message Size (in bytes): ");
+    scanf("%d", &msgSize);
+
+    padding = blockSize - (msgSize % blockSize);
+
+    if (padding == blockSize)
+        padding = blockSize;
+
+    printf("\nPadding Required = %d bytes\n", padding);
+
+    printf("\nReason for adding a full padding block:\n");
+    printf("1. Removes ambiguity during decryption.\n");
+    printf("2. Receiver can correctly identify padding.\n");
+    printf("3. Improves security against padding attacks.\n");
+
+    return 0;
+}
