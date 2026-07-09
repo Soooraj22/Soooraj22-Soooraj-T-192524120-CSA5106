@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    printf("Playfair Cipher Encryption\n");
+    printf("-------------------------------\n");
+    printf("Given Matrix:\n\n");
+
+    printf("M F H I/J K\n");
+    printf("U N O P Q\n");
+    printf("Z V W X Y\n");
+    printf("E L A R G\n");
+    printf("D S T B C\n\n");
+
+    printf("Encryption Rules:\n");
+    printf("1. Same Row    -> Move Right\n");
+    printf("2. Same Column -> Move Down\n");
+    printf("3. Rectangle   -> Exchange Columns\n");
+
+    return 0;
+}
