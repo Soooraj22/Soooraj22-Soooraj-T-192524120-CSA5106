@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int key[2][2] = {{9,4},{5,7}};
+    char plain[20];
+    int i;
+
+    printf("Enter Plain Text (Even Length): ");
+    scanf("%s", plain);
+
+    printf("Cipher Text: ");
+
+    for(i = 0; plain[i] != '\0'; i += 2) {
+        int p1 = plain[i] - 'A';
+        int p2 = plain[i+1] - 'A';
+
+        printf("%c", ((key[0][0]*p1 + key[0][1]*p2)%26)+'A');
+        printf("%c", ((key[1][0]*p1 + key[1][1]*p2)%26)+'A');
+    }
+
+    printf("\n");
+
+    return 0;
+}
