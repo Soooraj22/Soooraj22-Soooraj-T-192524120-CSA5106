@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+
+    printf("DES Subkey Generation\n");
+    printf("---------------------\n");
+    printf("The first 24 bits of each subkey come from the left 28-bit half.\n");
+    printf("The second 24 bits come from the right 28-bit half.\n");
+    printf("Each round performs left circular shifts followed by PC-2 permutation.\n");
+
+    return 0;
+}
