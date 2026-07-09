@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+long long power(long long a,long long b,long long mod)
+{
+    long long res=1;
+
+    while(b)
+    {
+        if(b%2)
+            res=(res*a)%mod;
+
+        a=(a*a)%mod;
+        b/=2;
+    }
+
+    return res;
+}
+
+int main()
+{
+    char ch;
+    long long e,n;
+
+    printf("Enter Character (A-Z): ");
+    scanf("%c",&ch);
+
+    printf("Enter Public Key (e n): ");
+    scanf("%lld%lld",&e,&n);
+
+    printf("Encrypted Value = %lld\n",
+           power(ch-'A',e,n));
+
+    return 0;
+}
