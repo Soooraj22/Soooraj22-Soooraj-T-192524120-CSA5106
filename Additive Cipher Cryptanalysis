@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char cipher[100];
+    int key, i;
+
+    printf("Enter Cipher Text: ");
+    scanf("%s", cipher);
+
+    printf("\nPossible Plain Texts:\n");
+
+    for(key = 0; key < 26; key++) {
+        printf("Key %2d : ", key);
+
+        for(i = 0; cipher[i] != '\0'; i++)
+            printf("%c", ((cipher[i]-'A'-key+26)%26)+'A');
+
+        printf("\n");
+    }
+
+    return 0;
+}
