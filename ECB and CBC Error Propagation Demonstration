@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+
+    printf("ECB vs CBC Error Propagation\n\n");
+
+    printf("ECB Mode:\n");
+    printf("- Error in one ciphertext block affects only the corresponding plaintext block.\n\n");
+
+    printf("CBC Mode:\n");
+    printf("- Error in C1 affects P1 completely.\n");
+    printf("- Also flips one bit in P2.\n");
+    printf("- Blocks beyond P2 are not affected.\n\n");
+
+    printf("If P1 contains a bit error before encryption,\n");
+    printf("all subsequent ciphertext blocks are affected during encryption.\n");
+
+    return 0;
+}
