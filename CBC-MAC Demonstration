@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("CBC-MAC Demonstration\n\n");
+
+    printf("Given:\n");
+    printf("T = MAC(K, X)\n\n");
+
+    printf("The MAC of X || (X XOR T)\n");
+    printf("is again equal to T.\n\n");
+
+    printf("This illustrates why CBC-MAC\n");
+    printf("should only be used for fixed-length messages.\n");
+
+    return 0;
+}
