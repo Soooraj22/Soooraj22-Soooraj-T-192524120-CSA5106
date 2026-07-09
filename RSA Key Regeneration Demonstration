@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+
+    printf("RSA Key Regeneration\n\n");
+
+    printf("If the private key is leaked,\n");
+    printf("generating only a new public/private exponent pair\n");
+    printf("with the same modulus (n) is NOT secure.\n\n");
+
+    printf("A completely new modulus (new primes p and q)\n");
+    printf("must be generated.\n");
+
+    return 0;
+}
