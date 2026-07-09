@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("Hill Cipher Known Plaintext Attack\n");
+    printf("---------------------------------\n");
+    printf("If enough plaintext and ciphertext pairs are known,\n");
+    printf("the key matrix can be recovered using matrix algebra.\n");
+
+    return 0;
+}
